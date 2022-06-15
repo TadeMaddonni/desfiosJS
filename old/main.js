@@ -103,3 +103,47 @@ do {
 
 
 alert(`El valor de la compra es ${precioTotal}`); */
+
+
+
+/* function existVar (){
+    var a = 10;
+    console.log(a);
+
+    if(true){
+        var a = 20;
+        console.log(a);
+    }
+
+    console.log (a);
+}
+
+existVar(); */
+
+//Funciones Anonimas
+/* 
+const suma = function (a, b) { return a + b};
+console.log(suma(3,4));
+
+
+//Funciones flecha
+const resta = (a=0,b=0,c=0) => {return a - b - c};
+console.log(resta(5,2,));
+
+
+const  sumaa = (a,b) => {return a + b};
+console.log(sumaa(3,3)); */
+
+
+
+
+
+const suma =  (a, b) => { return a + b};
+const resta = (a,b,) => {return a - b};
+const descuento= (x) => {return x * 0.5 } ; // Descuento del 20% del precioInicial del producto
+const iva = (x) => {return x * 0.21}; // Impuesto al Valor Agregado del 21%
+let precioInicial = parseInt(prompt("Ingrese el precio inicial del producto"));
+
+
+let nuevoPrecio = Number(resta(suma(precioInicial, iva(precioInicial)), descuento(precioInicial)));
+console.log(`El nuevo precio con IVA y el descuento del 50% es $${nuevoPrecio}`);
