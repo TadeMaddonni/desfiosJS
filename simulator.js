@@ -23,7 +23,7 @@ let descuentoFinal = 0
                 product = prompt("Ingresa el producto a agregar en la lista");
                 price = Number(prompt("Ingrese el precio inicial del producto"));
             } else{
-                alert("Programa finalzado");
+                alert("Programa finalizado");
             }
         }
 
@@ -39,7 +39,7 @@ let descuentoFinal = 0
             }
         
         if(agregarDescuento==true){ 
-            let porcentajeDescuento = Number(prompt("Ingrese el porcentaje de descuetno que desea agregar, del 1 al 100"));
+            let porcentajeDescuento = Number(prompt("Ingrese el porcentaje de descuento que desea agregar, del 1 al 100"));
             descuentoFinal =  descuento (price, porcentajeDescuento); // Cálculo para agregar descuento
         }
 
