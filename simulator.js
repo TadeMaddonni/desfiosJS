@@ -35,6 +35,7 @@ function validarDatos (product, price){
 
         validarDatos(product,price);
 
+
         priceConIva = suma(price, iva(price)) //Cálculo del IVA
 
         let agregarDescuento = prompt("Desea agregarle un descuento al producto? si/no").toLowerCase();
@@ -48,7 +49,7 @@ function validarDatos (product, price){
             }
         
         if(agregarDescuento==true){ 
-            let porcentajeDescuento = Number(prompt("Ingrese el porcentaje de descuetno que desea agregar, del 1 al 100"));
+            let porcentajeDescuento = Number(prompt("Ingrese el porcentaje de descuento que desea agregar, del 1 al 100"));
             descuentoFinal =  descuento (price, porcentajeDescuento); // Cálculo para agregar descuento
         }
 
