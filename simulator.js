@@ -35,11 +35,9 @@ function validarDatos (product, price){
 
         validarDatos(product,price);
 
-
         priceConIva = suma(price, iva(price)) //Cálculo del IVA
 
         let agregarDescuento = prompt("Desea agregarle un descuento al producto? si/no").toLowerCase();
-            console.log(agregarDescuento);
 
         if(agregarDescuento == "si" ){
             agregarDescuento=true;
@@ -61,6 +59,7 @@ function validarDatos (product, price){
         console.log(`El producto es ${product}`);
         console.log(`El precio del producto es $${price}`);
         console.log (`El precio con IVA es $${priceConIva}`);
+        console.log(` ${agregarDescuento} agregar descuento`);
         console.log(`El descuento del producto es $${descuentoFinal}`)
         console.log(`El precio final del producto es $${finalPrice} `);
 
