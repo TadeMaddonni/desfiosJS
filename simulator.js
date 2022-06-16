@@ -4,6 +4,7 @@ let price = 0;
 let priceConIva = 0;
 let agregarMas  = true;
 let finalPrice = 0;
+let otroIntento = false;
 
 const suma = (a,b) => {return a + b}; // función de suma
 const resta = (a,b) => {return a - b}; //función de resta
@@ -12,20 +13,27 @@ const iva = (x) => {return x * 0.21}; // cálculo del IVA
 const descuento = (a, b) => {return a * b /100}; // Calculo del descuento
 let descuentoFinal = 0
 
+function validarDatos (product, price){
+    if(product == "" || isNaN(price)){ //Validación de productos y precios validos
+        alert("error alguno de los datos ingresados son incorrectos");
+        otroIntento = prompt("¿Desea volver a intentar? si/no ").toLowerCase(); //Confirmación antes de finalzar
+
+        if (otroIntento == "si"){
+            product = prompt("Ingresa el producto a agregar en la lista");
+            price = Number(prompt("Ingrese el precio inicial del producto"));
+        } else{
+            alert("Programa finalzado");
+        }
+    }
+}
+
+
+
     do {
         product = prompt("Ingresa el producto a agregar en la lista"); 
         price = Number(prompt("Ingrese el precio inicial del producto"));
 
-        if(product == "" || isNaN(price)){ //Validación de productos y precios validos
-            alert("error alguno de los datos ingresados son incorrectos");
-            let otroIntento = prompt("¿Desea volver a intentar? si/no "); //Confirmación antes de finalzar
-            if (otroIntento == si){
-                product = prompt("Ingresa el producto a agregar en la lista");
-                price = Number(prompt("Ingrese el precio inicial del producto"));
-            } else{
-                alert("Programa finalzado");
-            }
-        }
+        validarDatos(product,price);
 
         priceConIva = suma(price, iva(price)) //Cálculo del IVA
 
@@ -36,6 +44,7 @@ let descuentoFinal = 0
             agregarDescuento=true;
         }else{
                 agregarDescuento=false;
+                porcentajeDescuento=0;
             }
         
         if(agregarDescuento==true){ 
@@ -65,4 +74,8 @@ let descuentoFinal = 0
             alert(`Hasta aqui llego la carga de stock`);
             console.log(`------Hasta aqui llegó la carga de stock------`);
         }
+
+        descuentoFinal=0;
+        
+
     } while (agregarMas);
