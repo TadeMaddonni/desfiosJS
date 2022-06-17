@@ -1,0 +1,43 @@
+
+/* Universal */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $main-font;
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+}
+
+p::selection{
+    background-color: $main-color;
+    color: $secondary-color;
+}
+
+a::selection{
+    background-color: $main-color;
+    color: $secondary-color;
+}
+h2::selection{
+    background-color: $main-color;
+    color: $secondary-color;
+}
+
+h1::selection{
+    background-color: $secondary-color;
+    color: $main-color;
+}
+
+span::selection{
+    background-color: $secondary-color;
+    color: $main-color;
+}
+
+img::selection{
+    background-color: $main-color;
+    color: $secondary-color;
+}

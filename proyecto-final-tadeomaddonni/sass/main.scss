@@ -1,0 +1,382 @@
+/* Variables */
+@import 'utilities/variables'; 
+
+/* Globals */
+@import 'partials/globals';
+
+/* Header */
+@import 'partials/header';
+
+
+/* Main Index */
+.mainIndex{
+    margin-top: 60px;
+}
+.sectionOne{
+    margin-top: 40px;
+    margin-bottom: 50px;
+    background-color: $main-color;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+.sectionContainer{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainText{
+    font-weight: 400;
+    text-align: center;
+    color: $secondary-color;
+    font-size: 35px;
+
+    span{
+        font-style: italic;
+        font-weight: 700;
+    }
+}
+
+.btnTienda{
+    width: 100px;
+    height: 24px;
+    padding-top: 3px;
+    border-radius:6px;
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    color: $main-color;
+    background-color: $secondary-color;
+
+    &:hover{
+        color: $main-color;
+        font-weight: 600;
+        transform: scale(1.1);
+        transition: .3s;
+        box-shadow: 2px 2px 2px rgba(255, 254, 254, 0.219);
+    }
+}
+
+
+
+#nosotros{
+    margin-top: 70px;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nosotrosContainer{
+    padding: 10px;
+    width: 30%;
+    height: 70%;
+    border-radius: 5px;
+    background-color: $main-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nosotrosTitle{
+    text-align: center;
+    font-size: 30px;
+    color: $secondary-color;
+    font-weight:600 ;
+}
+
+.nosotrosText{
+    font-size: 15px;
+    color: $secondary-color;
+    font-weight: 500;
+    text-align: center;
+}
+
+.recorridoContainer{
+    display: flex;
+    gap: 10px;
+}
+.icons{
+    color: #7B68EC;
+    fill: $main-color;
+}
+
+.recorridoLinea{
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 2px;
+    height: 30px;
+    background-color: $main-color;
+}
+
+.recorridoText{
+    color: $main-color;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+/* Comienza main Tienda */
+
+
+.mainTienda{
+    height: max-content;
+}
+.sectionTitle{
+    width: 100%;
+    height: 120px;
+    background-color: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.titleTienda{
+    font-size: 40px;
+    color: $secondary-color;
+    font-weight: 600;
+    text-align: center;
+}
+
+.sectionAuris{
+    margin-top:60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.linkSelfPage{
+    text-decoration: none;
+}
+.sectionAuris__title{
+    margin-left: 20px;
+    color: $main-color;
+    font-size: 35px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.aurisFirstLine{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.aurisProduct{
+    /* border: 3px solid $main-color; */
+/*     box-shadow: 3px 3px 3px rgba(175, 174, 174, 0.493) */
+
+    box-shadow: 0px 2px 21px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 2px 10px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 10px -4px rgba(0,0,0,0.75);
+    width:260px;
+    height: 320px;
+    border-radius: 9px;
+}
+
+.aurisImg{
+    height: 220px;
+    width: 100%;
+
+    img{
+        height: 220px;
+        width: 100%;
+    }
+}
+
+.aurisTextContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.aurisDescription{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    color: $main-color;
+}
+
+.aurisAddToCart{
+    color: $main-color;
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(1.2);
+        transition: .3s;
+    }
+}
+
+.aurisPrecio{
+    padding:10px ;
+    margin-bottom: 4px;
+    color: $main-color;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Main contacto */
+
+.sectionSubtitle {
+    display: flex;
+    justify-content: flex-start;
+
+    div{
+        margin-top: 40px;
+    }
+}
+
+.contactSubtitle{
+    margin-left: 20px;
+    color: $main-color;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.formSection{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer {
+    height: 450px;
+    width: 500px;
+    background-color: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    box-shadow: 0px 2px 21px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 2px 21px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 21px -4px rgba(0,0,0,0.75);
+/*     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.144); */
+}
+
+.contactoForm{
+    background-color: $main-color;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+label{
+    display: none
+}
+
+.contactoInputContainer{
+    background-color: $secondary-color;
+    height: 35px;
+    border-radius: 4px;
+}
+
+.textareaContainer{
+    height: 40px;
+}
+.contactoInput{
+    padding: 4px;
+    width:100%;
+    height: 100%;
+    border-radius: 4px;
+    border: none;
+
+    &::placeholder{
+        padding-top: 10px;
+        font-style: italic;
+        color: $main-color;
+        font-weight: 500;
+        font-size: 13px;
+        padding-left: 10px
+    }
+}
+
+.contactoBtnContainer{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.contactoBtn{
+    padding: 7px;
+    color: $main-color;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Main Login */
+
+.loginFormSection{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginFormContainer{
+    margin-top: 20px;
+    height: 420px;
+    width: 350px;
+    background-color: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    box-shadow: 0px 2px 21px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 2px 21px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 21px -4px rgba(0,0,0,0.75);
+}
+
+.loginForm{
+    background-color: $main-color;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.passOlvidadaContainer{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+.loginPassOlvidada{
+    margin-top: 5px;
+    font-size: 12px;
+    color: $secondary-color;
+    text-align: center;
+}
+
+/* Comienza main Paginas individuales! */
+@import 'individualpages/cloudii.scss';
+
+/* Footer */
+@import 'partials/footer';
+
+
+
+/* Media Mobile */
+
+@import 'media/mobile';
+
