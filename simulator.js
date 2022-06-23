@@ -5,11 +5,14 @@ let priceConIva = 0;
 let agregarMas  = true;
 let finalPrice = 0;
 let otroIntento = false;
+let productName = product;
+
+const listaDeProductos = [];
 
 const suma = (a,b) => {return a + b}; // función de suma
 const resta = (a,b) => {return a - b}; //función de resta
 
-const iva = (x) => {return x * 0.21}; // cálculo del IVA
+const iva = (x) => {return x * 1.21}; // cálculo del IVA
 const descuento = (a, b) => {return a * b /100}; // Calculo del descuento
 let descuentoFinal = 0
 
@@ -28,6 +31,15 @@ function validarDatos (product, price){
 }
 
 
+// Función constructora de objetos
+
+class productos {
+    constructor (name, price,){
+        this.nombre = name,
+        this.precio = price
+    }
+}
+
 
     do {
         product = prompt("Ingresa el producto a agregar en la lista"); 
@@ -35,7 +47,7 @@ function validarDatos (product, price){
 
         validarDatos(product,price);
 
-        priceConIva = suma(price, iva(price)) //Cálculo del IVA
+        priceConIva = iva(price); //Cálculo del IVA
 
         let agregarDescuento = prompt("Desea agregarle un descuento al producto? si/no").toLowerCase();
 
@@ -53,26 +65,21 @@ function validarDatos (product, price){
 
 
         finalPrice = resta(priceConIva, descuentoFinal); // Calculo del precio final
-
-
-        //Armando lista detallada en consola
-        console.log(`El producto es ${product}`);
-        console.log(`El precio del producto es $${price}`);
-        console.log (`El precio con IVA es $${priceConIva}`);
-        console.log(` ${agregarDescuento} agregar descuento`);
-        console.log(`El descuento del producto es $${descuentoFinal}`)
-        console.log(`El precio final del producto es $${finalPrice} `);
-
+        
+        // creando objeto y agregandolo al array
+        productName = new productos(product, price);
+        listaDeProductos.push(productName);
 
 
         //Imprimiendo el producto y el precio del mismo en la página
-        document.write(`${product} ha sido agregado a la lista con el precio de ${finalPrice} <br>`);
+        alert(`${product} ha sido agregado a la lista con el precio de ${finalPrice}`);
 
         agregarMas=confirm("¿Desea agregar mas productos?"); // Confirmación para continuar la compra
 
         if (agregarMas==false){
             alert(`Hasta aqui llego la carga de stock`);
             console.log(`------Hasta aqui llegó la carga de stock------`);
+            console.log(listaDeProductos)      
         }
 
         descuentoFinal=0;
