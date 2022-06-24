@@ -76,10 +76,17 @@ class productos {
 
         agregarMas=confirm("¿Desea agregar mas productos?"); // Confirmación para continuar la compra
 
+        const nombresProductos = listaDeProductos.map(products => products.nombre);
+
         if (agregarMas==false){
             alert(`Hasta aqui llego la carga de stock`);
             console.log(`------Hasta aqui llegó la carga de stock------`);
-            console.log(listaDeProductos)      
+            console.log(listaDeProductos);
+            console.log(nombresProductos);      
+            alert(`
+                Se agregaron correctamente los siguientes productos:
+                ${nombresProductos};
+            `)
         }
 
         descuentoFinal=0;
