@@ -93,3 +93,19 @@ class productos {
         
 
     } while (agregarMas);
+
+    let limitePrecio = 0;
+
+    let filtrarPorPrecio = confirm("¿Desea filtrar por precio?");
+    if (filtrarPorPrecio == true){
+        limitePrecio = Number(prompt("Ingrese el precio maximo"));
+    }
+
+    const filtroPrecio =  listaDeProductos.filter( el => el.precio <= limitePrecio);
+    console.log(filtroPrecio);
+
+    const preciosFiltrados = filtroPrecio.map(el => el.nombre);
+    alert(`
+    Los productos con precio menor a $${limitePrecio} son los siguientes:
+    ${preciosFiltrados}
+    `);
